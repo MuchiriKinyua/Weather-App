@@ -1,8 +1,11 @@
 const apiKey = "d3361a3940df7b07c93e9a9badb9eee1";
-const apiUrl = "https://pro.openweathermap.org/data/2.5/forecast/climate?units=metric&q=nairobi";
+const apiUrl = "https://pro.openweathermap.org/data/2.5/forecast/climate?units=metric&q=";
 
-async function checkWeather(){
-    const response = await fetch(apiUrl + `&appid=${apiKey}`);
+const searchBox = document.querySelector(".search input");
+const searchBtn = document.querySelector(".search button");
+
+async function checkWeather(city){
+    const response = await fetch(apiUrl + city + `&appid=${apiKey}`);
     var data = await response.json();
 
     console.log(data);
@@ -14,4 +17,8 @@ async function checkWeather(){
 
 }
 
-checkWeather();
+searchBtn.addEventListener("click", ()=>{
+    checkWeather(searchBox.value);
+})
+
+
