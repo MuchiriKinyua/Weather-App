@@ -29,7 +29,7 @@ A simple, responsive weather application that allows users to search for current
 ## Setup Instructions </br>
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/weather-app.git
+   git clone https://github.com/MuchiriKinyua/weather-app.git
 
     Navigate to the project directory:
 
